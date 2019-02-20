@@ -2,38 +2,60 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon-24x24.png" />
 <title>JavaScript</title>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bs/bootstrap.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.js"></script>
+
+<!-- Popper JS -->
+<script src="js/popper.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bs/bootstrap.js"></script>
+
 </head>
 
 <body>
 
+<div class="container">
 
 <h1>Hey! Estoy programando!!!!</h1>
 
 
 
-<h2 id="mensajeDeAviso">Cargando hora...</h2>
+    <h2 id="mensajeDeAviso">Cargando one more time</h2>
+    
+    <button type="button" class="btn btn-primary" onClick="saludoPrograma()">Click me</button>
+   
+    
+    
+    
 
-
+</div>
 <script>
-	setInterval(function(){ 
-		var today = new Date();
-		var secs = today.getSeconds();
-		if(secs < 10)
-		{
-			secsZero = '0' + secs;
-		}
-		else
-		{
-			secsZero = secs;
-		}
-		var time = today.getHours() + ":" + today.getMinutes() + ":" + secsZero;
-		document.getElementById('mensajeDeAviso').innerHTML = time;
-	}, 1000);
-	
-
+    
+    function saludoPrograma() {
+        var aviso;
+		aviso = 'Hola';
+		var DOM_aviso = document.getElementById('mensajeDeAviso');
+		
+		
+		
+        console.log('Hola Alan 1');
+		DOM_aviso.innerHTML = aviso;
+		//document.getElementById('mensajeDeAviso').innerHTML = aviso;
+		
+    }
+    
+    
 </script>
-
 </body>
 </html>
 

@@ -107,7 +107,7 @@
                 
                 
                     <div class="embed-responsive embed-responsive-4by3">
-                        <video poster="img/poster/tim1.jpg">
+                        <video poster="images/poster/tim1.jpg">
                             <source src="vids/video01.mp4"  type="video/mp4">
                             <source src="vids/video01.ogv"  type="video/ogg"->
                             

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon-24x24.png" />
+<title>Listener</title>
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bs/bootstrap.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.js"></script>
+
+<!-- Popper JS -->
+<script src="js/popper.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bs/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+
+
+ <button type="button" class="btn btn-warning btn-sm" id="btnCualquiera">Click Me</button>
+
+
+
+
+<script>
+
+var DOM_btn = document.getElementById('btnCualquiera');
+
+DOM_btn.addEventListener('mouseover',myFunction);
+
+function myFunction(){
+	console.log('FUNCIONA');	
+}
+
+DOM_btn.addEventListener('mouseout',myFunction2);
+
+function myFunction2(){
+	console.log('FUNCIONA OTRA VEZ');	
+}
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>

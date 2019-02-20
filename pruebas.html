@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pruebas</title>
+</head>
+
+<body>
+<p><button onclick="playVid1()" type="button">Play Video</button>
+<button onclick="pauseVid1()" type="button">Pause Video</button><br> 
+    <video width="320"  poster="images/poster/tim1.jpg" id="video1">
+        <source src="vids/video01.mp4"  type="video/mp4" />
+        <source src="vids/video01.ogv"  type="video/ogg" />
+        
+        Your browser does not support the video tag.
+    </video></p>
+    <h2>Botones que llaman a una sola función</h2>
+ <p><button onclick="playVid2()" type="button">Play Video</button>
+<button onclick="pauseVid2()" type="button">Pause Video</button><br> 
+    <video width="320"  poster="images/poster/tim1.jpg" id="video2">
+        <source src="vids/video01.mp4"  type="video/mp4" />
+        <source src="vids/video01.ogv"  type="video/ogg" />
+        
+        Your browser does not support the video tag.
+    </video></p>
+ 
+ 
+ <hr>
+ <button onClick="playVidGood('video1')" type="button">Play Video 1</button>
+ <button onClick="playVidGood('video2')" type="button">Play Video 2</button>
+ 
+ <script> 
+var vid1 = document.getElementById("video1"); 
+var vid2 = document.getElementById("video2");
+ 
+function playVid1() { 
+  vid1.play(); 
+} 
+function playVid2() { 
+  vid2.play(); 
+}
+
+function pauseVid1() { 
+  vid1.pause(); 
+} 
+function pauseVid2() { 
+  vid2.pause(); 
+} 
+
+//Esta función vale para todos los vídeos, y es  la buena
+//Pide una variable: la ID del vídeo
+function playVidGood(videoID) {
+	var vid = document.getElementById(videoID);
+	vid.play();
+}
+
+</script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

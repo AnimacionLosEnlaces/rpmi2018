@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript</title>
+</head>
+
+<body>
+
+
+<h1>Hey! Estoy programando!!!!</h1>
+
+
+
+<h2 id="mensajeDeAviso">Cargando hora...</h2>
+
+
+<script>
+	setInterval(function(){ 
+		var today = new Date();
+		var secs = today.getSeconds();
+		if(secs < 10)
+		{
+			secsZero = '0' + secs;
+		}
+		else
+		{
+			secsZero = secs;
+		}
+		var time = today.getHours() + ":" + today.getMinutes() + ":" + secsZero;
+		document.getElementById('mensajeDeAviso').innerHTML = time;
+	}, 1000);
+	
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mostrar ocultar</title>
+
+
+<style>
+
+.hidden {
+	display: none;	
+}
+
+</style>
+</head>
+
+<body>
+
+<p><button id="btn1" onClick="playVideo('btn1','btn2','video1')">Play</button>
+<button id="btn2" class="hidden" onClick="pauseVideo('btn1','btn2','video1')">Pause</button></p>
+
+<p><button id="btn3" onClick="playVideo('btn3','btn4','video2')">Play</button>
+<button id="btn4" class="hidden" onClick="pauseVideo('btn3','btn4','video2')">Pause</button></p>
+
+
+<video poster="images/poster/tim1.jpg" width="200" id="video1">
+    <source src="vids/video01.mp4"  type="video/mp4">
+    <source src="vids/video01.ogv"  type="video/ogg">
+    
+    Your browser does not support the video tag.
+</video>
+
+<video poster="images/poster/tim1.jpg" width="200" id="video2">
+    <source src="vids/video01.mp4"  type="video/mp4">
+    <source src="vids/video01.ogv"  type="video/ogg">
+    
+    Your browser does not support the video tag.
+</video>
+
+<p><button id="btn_listener">Play ALL</button></p>
+<script>
+
+
+
+function playVideo(var1,var2,var3) {
+	var DOM_btn1 = document.getElementById(var1);
+	var DOM_btn2 = document.getElementById(var2);
+	var DOM_video = document.getElementById(var3);
+	console.log(var1 + ' ' + var2);
+	DOM_btn1.style.display = 'none';
+	DOM_btn2.style.display = 'block';
+	DOM_video.play();
+	//
+}
+
+function pauseVideo(var1,var2, var3) {
+	var DOM_btn1 = document.getElementById(var1);
+	var DOM_btn2 = document.getElementById(var2);
+	var DOM_video = document.getElementById(var3);
+	console.log(var1 + ' ' + var2);
+	DOM_btn1.style.display = 'block';
+	DOM_btn2.style.display = 'none';
+	DOM_video.pause();
+	//
+}
+
+//Listener
+var DOM_listener = document.getElementById('btn_listener');
+
+DOM_listener.addEventListener('click',function() {
+		
+		console.log('listener');
+		playVideo('btn1','btn2','video1');
+		playVideo('btn3','btn4','video2');
+	
+	
+	});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

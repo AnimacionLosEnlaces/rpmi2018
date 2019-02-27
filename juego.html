@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<!--
+<img src="images/btn/btn1a.png" alt="Atacar" id="btn1" onMouseOver="btnOver('btn1','btn1b')">
+<img src="images/btn/btn2a.png" alt="Saltar" id="btn2" onMouseOver="btnOver('btn2','btn2b')">
+-->
+
+<img src="images/btn/btn1a.png" alt="Atacar" id="btn1" onMouseOver="btnOver('1')">
+<img src="images/btn/btn2a.png" alt="Saltar" id="btn2" onMouseOver="btnOver('2')">
+<script>
+
+/*
+function btnOver(idBtn,imgOver) {
+	console.log("ID: " + idBtn + " - Img: " + imgOver);
+	var path = "images/btn/" + imgOver + ".png";
+	console.log(path);
+	document.getElementById(idBtn).src = path;
+}
+
+*/
+var globalPath = "images/btn/btn";
+
+function btnOver(num) {
+	var path = globalPath + num + "b.png";
+	console.log(path);
+	document.getElementById('btn' + num).src = path;
+}
+
+
+</script>
+</body>
+</html>

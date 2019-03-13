@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body onLoad="init()">
 <div class="container-fluid">
 
 <!-- Cuerpo central-->
@@ -35,7 +35,7 @@
     <div class="col-lg-7 col-md-12">
 		<h2 id="titulo">Título del vídeo</h2>
         <div class="embed-responsive embed-responsive-16by9">
-            <video id="player" poster="images/poster/tim1.jpg" controls src="vids/video01.mp4">
+            <video id="player" poster="images/poster/poster1.png" controls src="vids/witcher/video01.mp4">
                 
             </video>
         </div>
@@ -60,12 +60,40 @@
                 	<!--Imagen-->
                     <div class="col-lg-4 col-md-12 d-md-block d-sm-none">
                     
-                    <img src="images/dummy/400x400_pink.png" alt="video1" class="img-fluid" onClick="cargarVideo('Título del vídeo 1','poster del video 1','video 1')">
+                    <img src="images/dummy/400x400_pink.png" alt="video1" class="img-fluid" onClick="cargarVideo('Título del vídeo 1','poster1.png','video01.mp4')">
                     </div>
                     
                     <!--Texto-->
                     <div class="col-lg-8 col-md-12">
-                    	<h5>Título del vídeo</h5>
+                    	<h5>The beauty of the witcher</h5>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, aspernatur iure autem natus rerum! Officia, optio, quae eveniet temporibus officiis.</p>
+                    </div>
+                
+                
+                </div>
+            
+            
+            </div>
+            <!--Fin item-->
+            
+            
+            
+            <!--Item-->
+            <div class="col-lg-12 col-md-3 col-sm-12">
+            	
+                
+                <div class="row">
+                
+                	<!--Imagen-->
+                    <div class="col-lg-4 col-md-12 d-md-block d-sm-none">
+                    
+                    <img src="images/dummy/400x400_pink.png" alt="video1" class="img-fluid" onClick="cargarVideo('Título del vídeo 2','poster2.png','video02.mp4')">
+                    </div>
+                    
+                    <!--Texto-->
+                    <div class="col-lg-8 col-md-12">
+                    	<h5>A night to remember</h5>
                         
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, aspernatur iure autem natus rerum! Officia, optio, quae eveniet temporibus officiis.</p>
                     </div>
@@ -110,8 +138,17 @@
 
 <script>
 
+function init(){
+	console.log('Se ha cargado la página');	
+}
+
 function cargarVideo(texto,poster,video){
-	console.log(texto + poster + video);	
+	//console.log("El título es: \"" + texto + "\"");
+	document.getElementById('titulo').innerHTML = texto;	
+	var videoURL = "vids/witcher/" + video;
+	//console.log(videoURL);
+	
+	document.getElementById('player').src = videoURL;
 }
 
 </script>

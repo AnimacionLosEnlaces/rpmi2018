@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon-24x24.png" />
+<title>Calculadora JS</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bs/bootstrap.css">
+
+<!-- jQuery library -->
+<script src="js/jquery.js"></script>
+
+<!-- Popper JS -->
+<script src="js/popper.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="js/bs/bootstrap.js"></script>
+
+</head>
+
+<body onLoad="init()">
+
+<div class="container">
+	<h1>Calculadora Javascript</h1>
+    <hr>
+    <p>
+    	<input id="num1" type="text" name="num1" value="" placeholder="Escribe un número">
+        <input id="num2" type="text" name="num2" value="" placeholder="Escribe otro número">
+    </p>
+    <p>
+    <button  onClick="calcular('sumar')">+</button>
+    <button onClick="calcular('restar')">-</button>
+    <button onClick="calcular('multiplicar')">x</button>
+    <button onClick="calcular('dividir')">:</button>
+    <br>
+    <button type="button" class="btn btn-success">Calcular</button>
+    </p>
+    <h2>Resultado: <span id="resultado"></span></h2>
+
+</div>
+
+
+<script>
+
+//Elementos del DOM
+var DOM_resultado = document.getElementById('resultado');
+var DOM_num1 = document.getElementById('num1');
+var DOM_num2 = document.getElementById('num2');
+
+//Función inicial
+function init(){
+	//DOM_num1.focus();
+}
+
+function sumar(x,y){
+	
+	var resultado = x + y;
+	
+	return resultado;
+	
+}
+function restar(x,y){
+	
+	var resultado = x - y;
+	
+	return resultado;
+	
+}
+function multiplicar(x,y){
+	
+	var resultado = x * y;
+	
+	return resultado;
+	
+}
+function dividir(x,y){
+	
+	var resultado = x / y;
+	
+	return resultado;
+	
+}
+
+function calcular(op)
+{
+	
+	var x = parseInt(DOM_num1.value);
+	var y = parseInt(DOM_num2.value);
+	
+	
+	var resultadoFinal;
+	
+	if(op == "sumar"){
+		resultadoFinal = sumar(x,y);
+	}
+	else if(op == "restar"){
+		resultadoFinal = restar(x,y);
+	}
+	else if(op == "multiplicar"){
+		resultadoFinal = multiplicar(x,y);
+	}
+	else if(op == "dividir"){
+		resultadoFinal = dividir(x,y);
+	}
+	else {
+		resultadoFinal = "Ni idea";
+	}
+	
+	
+	console.log(resultadoFinal);
+	DOM_resultado.innerHTML = resultadoFinal;
+}
+
+
+</script>
+
+</body>
+</html>

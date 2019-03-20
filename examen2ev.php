@@ -105,7 +105,7 @@ img {
                 	<!--Imagen-->
                     <div class="col-lg-4 col-md-12 d-md-block d-sm-none">
                     
-                    <img src="images/dummy/400x400_pink.png" alt="video1" class="img-fluid" onClick="cargarVideo(2)">
+                    <img src="images/dummy/400x400_pink.png" alt="video1" class="img-fluid" onClick="cargarVideo(2)" id="imagen2">
                     </div>
                     
                     <!--Texto-->
@@ -157,6 +157,7 @@ img {
 
 function init(){
 	console.log('Se ha cargado la página');	
+	document.getElementById('imagen2').focus();
 }
 
 function jugar(){

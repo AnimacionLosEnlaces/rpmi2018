@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>On/OFF</title>
+</head>
+
+<body>
+<h1 id="tit">OFF</h1>
+
+<script>
+
+var encendida = false;
+
+var DOM_tit = document.getElementById('tit');
+DOM_tit.addEventListener('mouseup',cambiarEstado);
+
+function cambiarEstado()
+{
+	if(encendida == true)
+	{
+		encendida = false;
+		DOM_tit.innerHTML = 'OFF';
+	}
+	else
+	{
+		encendida = true;
+		DOM_tit.innerHTML = 'ON';
+	}
+		
+}
+</script>
+
+</body>
+</html>

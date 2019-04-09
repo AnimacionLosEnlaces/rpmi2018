@@ -15,6 +15,7 @@ Hola
 
 echo $_POST['apellidos'];
 
+$_POST['time_rec'] = time();
 
 ?>
 </h2>
@@ -36,11 +37,6 @@ console.log(nombre);
 
 
 </script>
-
-
-
-
-
 
 
 

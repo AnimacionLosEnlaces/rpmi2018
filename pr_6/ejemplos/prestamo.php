@@ -1,3 +1,26 @@
+<?php
+//Función que comprueba si está definido el nombre o el código del alumno
+//También comprueba que no esté vacío
+if(isset($_GET['alumno_name']) && $_GET['alumno_name'] != '')
+{
+	
+	$nombre_alumno = $_GET['alumno_name'];
+	$display_image = 'block';
+}
+else if(isset($_GET['alumno_code']) && $_GET['alumno_code'] != '')
+{
+	$nombre_alumno = $_GET['alumno_code'];
+	$display_image = 'block';
+}
+else
+{
+	$nombre_alumno = '';
+	$display_image = 'none';
+}
+
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -64,7 +87,7 @@
     </div>
   </div>
   <hr>
-  <form action="prestamo.html" id="formAlumno" method="get">
+  <form action="prestamo.php" id="formAlumno" method="get">
     <div class="row"> 
       <!--Columna con el formulario-->
       <div class="col-12 col-md-8 pb-2">
@@ -82,7 +105,7 @@
         </div>
         <div class="row ">
           <div class="col-12 text-center">
-            <button type="button" class="btn btn-info" data-dismiss="modal" id="btn_validar"> <span class="glyphicon glyphicon-ok"></span>Validar</button>
+            <button type="button" class="btn btn-info" data-dismiss="modal" id="btn_validar"> <span class="glyphicon glyphicon-ok"></span>Validar</button> <button href="prestamo.php" type="button" class="btn btn-warning" id="btn_volver">Volver</button>
           </div>
         </div>
       </div>
@@ -92,10 +115,10 @@
       <div class="col-12 col-md-4 bg-light p-2">
         <div class="row">
           <div class="col-md-4 d-none d-md-block"> 
-			  <img src="img/Martin_Prince.png" class="img-fluid" alt="Alumno" style="display:none" id="foto_alumno"> 
+			  <img src="img/Martin_Prince.png" class="img-fluid" alt="Alumno" style="display:<?php echo $display_image ?>" id="foto_alumno"> 
 		  </div>
           <div class="col-12 col-md-8 text-center">
-            <h5 id="nombre_alumno"></h5>
+            <h5 id="nombre_alumno"><?php echo $nombre_alumno ?></h5>
             <p id="ciclo_alumno"></p>
           </div>
         </div>
